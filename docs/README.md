@@ -1,7 +1,7 @@
 ---
 home: true
-heroImage: /hero.png
-actionText: 快速上手 →
+heroImage: https://avatars.githubusercontent.com/u/109732988
+actionText: 快速上手 🚀
 actionLink: /zh/guide/
 features:
 - title: 简洁至上
