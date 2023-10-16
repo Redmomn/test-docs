@@ -1,7 +1,8 @@
 import { defineUserConfig } from 'vuepress'
+import { defaultTheme } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
 
-export default defineUserConfig<DefaultThemeOptions>({
+export default defineUserConfig({
     lang: 'zh-CN',
     title: '测试docs',
     description: '欢迎来到我的文档',
@@ -9,41 +10,9 @@ export default defineUserConfig<DefaultThemeOptions>({
     head: [
         ['link', { rel: 'icon', href: 'https://www.lovenie.icu/blog/wp-content/uploads/2023/09/宁宁.jpg' }]
     ],
-    plugins: [
-        ['@vuepress/back-to-top'],
-        [
-            '@vuepress/pwa',
-            {
-                skipWaiting: true
-            }
-        ],
-        [
-            '@vuepress/plugin-pwa-popup',
-            {
-                locales: {
-                    '/': {
-                        message: '发现新内容可用',
-                        buttonText: '刷新',
-                    }
-                }
-            }
-        ],
-        [
-            '@vuepress/plugin-google-analytics',
-            {
-            }
-        ],
-        [
-            "@vuepress/plugin-docsearch",
-            {
-                
-            }
-        ]
-    ],
-    
+
     // 主题和它的配置
-    theme: '@vuepress/theme-default',
-    themeConfig: {
+    theme: defaultTheme({
         repo: 'Redmomn/test-docs',
         docsRepo: 'Redmomn/test-docs',
         docsBranch: 'main',
@@ -67,7 +36,11 @@ export default defineUserConfig<DefaultThemeOptions>({
         //     { text: 'FAQ', link: '/faq/' }
         // ],
         sidebar: "auto",
-    },
+    }),
+
+    plugins:[
+        
+    ]
 
 })
 
